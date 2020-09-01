@@ -73,3 +73,5 @@ gem 'jp_prefecture'
 gem 'dotenv-rails'
 
 gem 'whenever'
+
+gem 'acts-as-taggable-on', '~> 6.0'

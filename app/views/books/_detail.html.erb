@@ -4,8 +4,9 @@
   <%= book.user.name %>
   <% end %>
 </td>
-<td><%= link_to @book.title, book_path(book) %></td>
+<td><%= link_to book.title, book_path(book) %></td>
 <td><%= book.body %></td>
+<td><%= render 'books/tag_list', tag_list: book.tag_list %></td>
 <td>
   <% if book.favorited_by?(current_user) %>
   <%= link_to book_favorites_path(book, redirect_id: 0), method: :delete, remote: true do%>

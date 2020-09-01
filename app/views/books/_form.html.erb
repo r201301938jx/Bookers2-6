@@ -9,6 +9,11 @@
 		<%= f.text_area :body, class: "col-xs-12 book_body" %>
 	</div>
 
+	<div class="field row">
+		<%= f.label :tag_list %>
+		<%= f.text_field :tag_list, value: book.tag_list.join(','), class: "col-xs-12 book_body" %>
+	</div>
+
 	<div class="actions row">
 		<%= f.submit class: "btn btn-primary col-xs-12" %>
 	</div>

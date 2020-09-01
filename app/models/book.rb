@@ -1,5 +1,9 @@
 class Book < ApplicationRecord
+
+  acts_as_taggable
+
 	belongs_to :user
+
   has_many :favorites, dependent: :destroy
   has_many :book_comments, dependent: :destroy
 	#バリデーションは該当するモデルに設定する。エラーにする条件を設定できる。
